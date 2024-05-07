@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Logo = () => {
   return (
-    <div className="logo text-2xl font-bold leading-6 tracking-wide text-black">
+    <Link
+      to="/"
+      className="logo text-2xl font-bold leading-6 tracking-[2px] text-black"
+    >
       <h1>Exclusive</h1>
-    </div>
+    </Link>
   );
 };
 

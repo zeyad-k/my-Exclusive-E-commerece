@@ -1,8 +1,9 @@
+import SearchInput from "./SearchInput";
+
 const HeaderIcons = () => {
   return (
-    <>
-      <div className="header-icons search-icon">0</div>
-
+    <div className="flex items-center gap-2">
+      <SearchInput />
       <div className="header-icons wish-icon">
         <svg
           width="32"
@@ -59,7 +60,7 @@ const HeaderIcons = () => {
           />
         </svg>
       </div>
-    </>
+    </div>
   );
 };
 
