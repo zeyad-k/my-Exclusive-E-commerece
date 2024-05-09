@@ -14,6 +14,9 @@ export default {
         'main-text-color': '#FAFAFA',
         'main-active-color':'#DB4444'
       },
+      borderWidth: {
+        '0.5': '0.5px',
+      },
     },
   },
   plugins: [],

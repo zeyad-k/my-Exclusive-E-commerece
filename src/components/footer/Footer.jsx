@@ -1,4 +1,5 @@
 import FooterColumnAccount from "./FooterColumnAccount";
+import FooterColumnDownloadApp from "./FooterColumnDownloadApp";
 import FooterColumnExclusive from "./FooterColumnExclusive";
 import FooterColumnQuickLink from "./FooterColumnQuickLink";
 import FooterColumnSupport from "./FooterColumnSupport";
@@ -16,6 +17,7 @@ const Footer = () => {
         <FooterColumnSupport />
         <FooterColumnAccount />
         <FooterColumnQuickLink />
+        <FooterColumnDownloadApp />
       </div>
     </footer>
   );
