@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div>
       <TopHeader />
-      <Header />
+      <Header className="sticky top-0" />
       <main className="border-t-0.5   border-[#b3b3b3]">
         <div className="content  mx-auto   max-w-[1200px] ">
           <Outlet />
