@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <Link
       to="/"
-      className="logo text-2xl font-bold leading-6 tracking-[2px] text-black"
+      className="logo font-inter text-2xl font-bold leading-6 tracking-[1px] text-black"
     >
       <h1>Exclusive</h1>
     </Link>
