@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 
 const ErrorPage = () => {
   return (
-    <div className="flex flex-col items-center gap-4 text-center">
+    <div className="flex h-screen flex-col items-center justify-center gap-4 py-5 ">
+      <BlockLevelBreadcrumbs />
       <h1 className="font-inter text-[110px] font-medium leading-[115px] tracking-wide text-black">
         404 Not Found
       </h1>
@@ -14,7 +16,7 @@ const ErrorPage = () => {
         to="/"
       >
         Back to home page
-      </Link>{" "}
+      </Link>
     </div>
   );
 };
