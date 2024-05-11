@@ -8,11 +8,11 @@ import FooterColumnSupport from "./FooterColumnSupport";
 const Footer = () => {
   return (
     <footer
-      className="top-header  bg-black  
+      className="footer  bg-black  
     py-20 font-poppins  text-main-text-color "
     >
       {/* container of footer  */}
-      <div className="mx-auto flex max-w-[1200px] gap-20">
+      <div className="mx-auto flex max-w-[1200px] flex-wrap gap-20">
         <FooterColumnExclusive />
         <FooterColumnSupport />
         <FooterColumnAccount />
