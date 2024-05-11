@@ -15,7 +15,7 @@ const HeaderNavigation = () => {
         <li>
           <Link
             className="transition duration-200 ease-in-out hover:underline  active:underline"
-            to="/"
+            to="contact"
           >
             Contact
           </Link>
@@ -23,7 +23,7 @@ const HeaderNavigation = () => {
         <li>
           <Link
             className="transition duration-200 ease-in-out hover:underline  active:underline"
-            to="/about"
+            to="about"
           >
             About
           </Link>
@@ -31,7 +31,7 @@ const HeaderNavigation = () => {
         <li>
           <Link
             className="transition duration-200 ease-in-out hover:underline  active:underline"
-            to="/about"
+            to="signUp"
           >
             Sign Up
           </Link>
