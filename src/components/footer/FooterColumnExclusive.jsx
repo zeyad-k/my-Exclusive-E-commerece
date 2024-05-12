@@ -16,7 +16,7 @@ const FooterColumnExclusive = () => {
         </Link>
         <p className="text-base font-normal">Get 10% off your first order</p>
       </div>
-      <form className="footer-enter-email flex max-w-[100%] gap-2  rounded-md border-2 border-solid border-main-text-color px-2 py-3">
+      <form className="footer-enter-email flex   gap-2  rounded-md border-2 border-solid border-main-text-color px-2 py-3">
         <input
           className="bg-transparent"
           type="email"

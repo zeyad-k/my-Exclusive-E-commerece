@@ -3,7 +3,7 @@ import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 
 const ErrorPage = () => {
   return (
-    <div className="my-10 ">
+    <div className="container my-10 ">
       <BlockLevelBreadcrumbs />
       <section className="  mt-10 flex flex-col items-center justify-center gap-20 py-5 text-center">
         <div className="flex flex-col gap-10 ">

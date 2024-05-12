@@ -12,7 +12,7 @@ const Footer = () => {
     py-20 font-poppins  text-main-text-color "
     >
       {/* container of footer  */}
-      <div className=" container flex flex-wrap gap-20">
+      <div className=" container flex flex-wrap gap-16">
         <FooterColumnExclusive />
         <FooterColumnSupport />
         <FooterColumnAccount />

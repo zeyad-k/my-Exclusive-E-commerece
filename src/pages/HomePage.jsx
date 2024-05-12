@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
     <div>
-      <h1 className="font-poppins">Home Page</h1>
+      <h1 className="container font-poppins">Home Page</h1>
     </div>
   );
 };
