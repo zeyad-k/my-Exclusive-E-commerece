@@ -82,7 +82,7 @@ const SignUpForm = () => {
             Sign up with Google
           </a>
         </span>
-        <span className="form-footer flex justify-center gap-4 text-center text-lg text-black opacity-70 ">
+        <span className="form-footer flex justify-center gap-4 text-center   text-black opacity-70 ">
           <p>Already have account?</p>
           <Link
             className="font-semibold underline-offset-8  hover:underline"
