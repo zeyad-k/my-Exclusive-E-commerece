@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
+import AboutPage from "./pages/AboutPage";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           {/* <Route path=":country" element={<Country />} /> */}
           <Route path="signUp" element={<SignUpPage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="about" element={<AboutPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
