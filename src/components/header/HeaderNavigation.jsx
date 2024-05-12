@@ -17,7 +17,7 @@ const HeaderNavigation = () => {
   return (
     <nav className="relative w-full overflow-hidden px-3 py-3">
       <IconButton
-        className="absolute left-[2%] sm:hidden"
+        className="absolute left-[2%] md:hidden"
         onClick={handleMenu}
         color="white"
       >
