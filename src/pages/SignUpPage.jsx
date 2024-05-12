@@ -5,7 +5,7 @@ const SignUpPage = () => {
     <div className="relative overflow-y-hidden">
       <img
         src="/images/sideimg.png"
-        className="absolute left-0 max-h-full"
+        className="absolute left-0 hidden max-h-full lg:block"
         alt="side image"
       />
       <section className="container ">
