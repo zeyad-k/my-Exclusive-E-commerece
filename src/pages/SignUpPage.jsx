@@ -2,7 +2,7 @@ import SignUpForm from "../components/customerAuth/SignUpForm";
 
 const SignUpPage = () => {
   return (
-    <div className="items-center gap-40 py-16 lg:flex">
+    <div className="container items-center gap-40 py-16 lg:flex">
       {/* <span>
         <svg
           width="805"
