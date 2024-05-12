@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SignUpForm = () => {
   return (
-    <div className="flex w-full flex-1 justify-end">
+    <div className="flex w-full flex-1 lg:justify-end">
       <form className="flex  flex-col    text-xl font-normal leading-6">
         <span className="form-heading mb-12 flex flex-col gap-6">
           <h2 className="font-inter text-4xl font-medium tracking-[4%]">

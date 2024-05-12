@@ -2,7 +2,7 @@ import SignUpForm from "../components/customerAuth/SignUpForm";
 
 const SignUpPage = () => {
   return (
-    <div className="relative overflow-y-hidden md:lg:my-16">
+    <div className="relative my-16 overflow-y-hidden">
       <img
         src="/images/sideimg.png"
         className="absolute left-0 hidden max-h-full lg:block"
