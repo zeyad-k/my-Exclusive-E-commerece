@@ -9,7 +9,7 @@ const Layout = () => {
       <TopHeader />
       <Header className="sticky top-0" />
       <main className="border-t-0.5   border-[#b3b3b3]">
-        <div className="content   container ">
+        <div className="content ">
           <Outlet />
         </div>
       </main>
