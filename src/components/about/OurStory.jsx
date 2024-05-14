@@ -23,7 +23,7 @@ const OurStory = () => {
 
       <img
         src="/images/sideStoryimage.png"
-        className="   w-full   "
+        className=" hidden  w-full lg:block  "
         alt="side story image"
       />
     </div>
