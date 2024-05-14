@@ -1,40 +1,15 @@
+import CustomerService from "../components/about/CustomerService";
+import OurStory from "../components/about/OurStory";
 import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 
 const AboutPage = () => {
   return (
-    <div className="container  my-16   ">
+    <div className=" container my-16 flex flex-col gap-32  font-poppins   ">
       <BlockLevelBreadcrumbs />
-      <div className=" story   my-16 flex overflow-hidden">
-        <section className="container ">
-          <div className=" flex flex-col   gap-10 text-left">
-            <h1 className="text-justify font-inter text-6xl font-semibold leading-none tracking-widest">
-              Our Story
-            </h1>
-            <span className="flex flex-col gap-6">
-              <p>
-                Launced in 2015, Exclusive is South Asia’s premier online
-                shopping makterplace with an active presense in Bangladesh.
-                Supported by wide range of tailored marketing, data and service
-                solutions, Exclusive has 10,500 sallers and 300 brands and
-                serves 3 millioons customers across the region.
-              </p>
-              <p>
-                Exclusive has more than 1 Million products to offer, growing at
-                a very fast. Exclusive offers a diverse assotment in categories
-                ranging from consumer.
-              </p>
-            </span>
-          </div>
-        </section>
 
-        <img
-          src="/images/sideStoryimage.png"
-          className="  hidden max-h-full max-w-full md:block"
-          alt="side story image"
-        />
-      </div>
+      <OurStory />
 
-      <section className="profits flex flex-wrap gap-3 lg:flex-nowrap">
+      <section className="profits flex    flex-wrap items-center justify-center gap-3 lg:flex-nowrap">
         <div className="sellers-active flex flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
@@ -139,7 +114,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="monthly-sells flex flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
+        <div className="monthly-sells flex flex-col items-center justify-center gap-2 rounded-md border border-black   border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
               width="80"
@@ -251,6 +226,8 @@ const AboutPage = () => {
           </p>
         </div>
       </section>
+
+      <CustomerService />
     </div>
   );
 };
