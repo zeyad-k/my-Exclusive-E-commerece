@@ -24,7 +24,7 @@ const Header = () => {
           className="logo font-inter text-2xl font-bold leading-6 tracking-[1px] text-black"
         >
           <h1>Exclusive</h1>
-        </Link>{" "}
+        </Link> 
         <IconButton className="sm:hidden" onClick={handleMenu} color="white">
           <MenuIcon />
         </IconButton>

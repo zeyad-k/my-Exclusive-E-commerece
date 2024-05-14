@@ -5,7 +5,7 @@ import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 
 const AboutPage = () => {
   return (
-    <div className=" container my-16 flex flex-col gap-32  font-poppins   ">
+    <div className=" container my-4  flex flex-col gap-32 font-poppins  lg:my-16   ">
       <BlockLevelBreadcrumbs />
 
       <OurStory />

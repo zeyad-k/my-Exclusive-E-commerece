@@ -26,6 +26,7 @@ module.exports = withMT({  content: [
       },
       colors: {
         'main-text-color': '#FAFAFA',
+        'main-form-input-color': '#F5F5F5',
         'main-active-color':'#DB4444'
       },
       borderWidth: {
