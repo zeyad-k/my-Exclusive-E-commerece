@@ -1,6 +1,6 @@
 const OurStory = () => {
   return (
-    <div className=" story flex  flex-wrap items-center justify-center   overflow-hidden lg:flex-nowrap">
+    <div className=" story flex flex-wrap items-center justify-center gap-4   overflow-hidden lg:flex-nowrap lg:gap-8">
       <div className=" flex flex-col   gap-10 text-left">
         <h1 className="text-justify font-inter text-6xl font-semibold leading-none tracking-widest">
           Our Story
@@ -23,7 +23,7 @@ const OurStory = () => {
 
       <img
         src="/images/sideStoryimage.png"
-        className="   w-full    "
+        className=" right-4 mx-[-16px]  w-full    "
         alt="side story image"
       />
     </div>
