@@ -31,6 +31,9 @@ module.exports = withMT({  content: [
       borderWidth: {
         '0.5': '0.5px',
       },
+      letterSpacing: {
+        '4': '4%',
+      },
     },
   },
   plugins: [],
