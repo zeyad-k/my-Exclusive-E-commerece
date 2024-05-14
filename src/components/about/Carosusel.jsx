@@ -21,7 +21,7 @@ export default function CarouselWithContent() {
   ];
   return (
     <Carousel
-      className="  flex  content-center items-center  justify-center    gap-16 rounded-xl px-12 py-10 font-poppins"
+      className="  flex  content-center items-center  justify-center gap-16 rounded-xl     py-4 font-poppins sm:gap-8   sm:px-8 sm:py-8 md:gap-16 md:px-12 md:py-10"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute  bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
