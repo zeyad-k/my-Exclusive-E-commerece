@@ -1,7 +1,13 @@
+import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
+import SectionComponent from "../components/ui/SectionComponent";
+
 const HomePage = () => {
   return (
-    <div>
-      <h1 className="container font-poppins">Home Page</h1>
+    <div className="flex flex-col gap-20">
+      <div className="container py-16 font-poppins">
+        <CarouselOfferHomePage />
+      </div>
+      <SectionComponent />
     </div>
   );
 };
