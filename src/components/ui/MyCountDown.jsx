@@ -15,22 +15,30 @@ const MyCountdownComponent = () => {
         <div className="flex items-end gap-2 font-poppins text-3xl  text-main-active-color">
           <div className="flex flex-col text-black">
             <span className="text-sm    font-medium">Days</span>
-            <span className="text-3xl font-bold tracking-wide">{days}</span>
+            <span className="text-3xl font-bold tracking-wide">
+              {String(days).padStart(2, "0")}
+            </span>
           </div>
           :
           <div className="flex flex-col text-black">
             <span className="text-sm    font-medium">Hours</span>
-            <span className="text-3xl font-bold tracking-wide">{hours}</span>
+            <span className="text-3xl font-bold tracking-wide">
+              {String(hours).padStart(2, "0")}
+            </span>
           </div>
           :
           <div className="flex flex-col text-black">
             <span className="text-sm    font-medium">Minutes</span>
-            <span className="text-3xl font-bold tracking-wide">{minutes}</span>
+            <span className="text-3xl font-bold tracking-wide">
+              {String(minutes).padStart(2, "0")}
+            </span>
           </div>
           :
           <div className="flex flex-col text-black">
             <span className="text-sm    font-medium">Seconds</span>
-            <span className="text-3xl font-bold tracking-wide">{seconds}</span>
+            <span className="text-3xl font-bold tracking-wide">
+              {String(seconds).padStart(2, "0")}
+            </span>
           </div>
         </div>
       );
