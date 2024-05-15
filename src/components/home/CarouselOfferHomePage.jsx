@@ -26,7 +26,7 @@ const CarouselOfferHomePage = () => {
     >
       <a href="#">
         <img
-          src="/public/images/offer1.png"
+          src="/images/offer1.png"
           alt="offer1"
           className="h-full w-full object-cover"
         />
@@ -34,7 +34,7 @@ const CarouselOfferHomePage = () => {
 
       <a href="#">
         <img
-          src="/public/images/offer1.png"
+          src="/images/offer1.png"
           alt="offer1"
           className="h-full w-full object-cover"
         />
@@ -42,7 +42,7 @@ const CarouselOfferHomePage = () => {
 
       <a href="#">
         <img
-          src="/public/images/offer1.png"
+          src="/images/offer1.png"
           alt="offer1"
           className="h-full w-full object-cover"
         />
@@ -50,14 +50,14 @@ const CarouselOfferHomePage = () => {
 
       <a href="#">
         <img
-          src="/public/images/offer1.png"
+          src="/images/offer1.png"
           alt="offer1"
           className="h-full w-full object-cover"
         />
       </a>
       <a href="#">
         <img
-          src="/public/images/offer1.png"
+          src="/images/offer1.png"
           alt="offer1"
           className="h-full w-full object-cover"
         />

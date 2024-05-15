@@ -1,3 +1,5 @@
+import MyCountdownComponent from "./MyCountDown";
+
 const SectionComponent = () => {
   return (
     <div className="container font-poppins">
@@ -11,8 +13,11 @@ const SectionComponent = () => {
             <span>Today’s</span>
           </span>
 
-          <span className="Section__Header_Down text-5xl font-semibold leading-relaxed tracking-wider">
-            Flash Sale
+          <span className="Section__Header_Down flex flex-col items-center gap-10 md:flex-row lg:gap-20 ">
+            <span className="text-5xl  font-semibold leading-relaxed tracking-wider">
+              Flash Sale
+            </span>
+            <MyCountdownComponent />
           </span>
         </div>
         <div className="Section__Header__Buttons self-end">Today’s</div>
