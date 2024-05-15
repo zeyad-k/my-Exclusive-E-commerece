@@ -1,3 +1,4 @@
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import MyCountdownComponent from "./MyCountDown";
 
 const SectionComponent = () => {
@@ -20,7 +21,14 @@ const SectionComponent = () => {
             <MyCountdownComponent />
           </span>
         </div>
-        <div className="Section__Header__Buttons self-end">Today’s</div>
+        <div className="Section__Header__Buttons flex gap-2 self-end">
+          <button className="Section__Header__Button__Back   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
+            <FaArrowLeftLong size={24} />
+          </button>
+          <button className="Section__Header__Button__Next   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
+            <FaArrowRightLong size={24} />
+          </button>
+        </div>
       </div>
 
       <div className="Section__Body"></div>
