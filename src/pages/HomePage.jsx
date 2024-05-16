@@ -2,6 +2,7 @@ import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
 import MyCountdownComponent from "../components/ui/MyCountDown";
 import SectionComponent from "../components/ui/SectionComponent";
 import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
+import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       <SectionComponent
         upTitle={"This Month"}
         downTitle="Best Selling Products"
+        buttons={<ViewAllBestSellingButton />}
       />
     </div>
   );
