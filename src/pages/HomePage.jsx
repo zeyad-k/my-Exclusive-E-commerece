@@ -1,6 +1,7 @@
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
 import MyCountdownComponent from "../components/ui/MyCountDown";
 import SectionComponent from "../components/ui/SectionComponent";
+import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
 
 const HomePage = () => {
   return (
@@ -12,11 +13,16 @@ const HomePage = () => {
         upTitle={"Today’s"}
         downTitle="Flash Sale"
         downContent={<MyCountdownComponent />}
+        buttons={<SectionComponentNextAndBackButtons />}
       />
       <SectionComponent
-        upTitle={"Today’s"}
-        downTitle="Flash Sale"
-        downContent={<MyCountdownComponent />}
+        upTitle={"Categories"}
+        downTitle="Browse By Category"
+        buttons={<SectionComponentNextAndBackButtons />}
+      />
+      <SectionComponent
+        upTitle={"This Month"}
+        downTitle="Best Selling Products"
       />
     </div>
   );

@@ -2,7 +2,7 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import MyCountdownComponent from "./MyCountDown";
 
 const SectionComponentHeader = (props) => {
-  const { upTitle, downTitle, downContent } = props;
+  const { upTitle, downTitle, downContent, buttons } = props;
 
   return (
     <div className="Section__Header flex flex-wrap justify-between">
@@ -19,16 +19,11 @@ const SectionComponentHeader = (props) => {
           <span className="text-5xl  font-semibold leading-relaxed tracking-wider">
             {downTitle}
           </span>
-          {downContent}
+          {downContent && downContent}
         </span>
       </div>
       <div className="Section__Header__Buttons flex gap-2 self-end py-4">
-        <button className="Section__Header__Button__Back   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
-          <FaArrowLeftLong size={20} />
-        </button>
-        <button className="Section__Header__Button__Next   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
-          <FaArrowRightLong size={20} />
-        </button>
+        {buttons && buttons}
       </div>
     </div>
   );
