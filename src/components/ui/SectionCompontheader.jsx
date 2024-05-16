@@ -5,7 +5,7 @@ const SectionComponentHeader = (props) => {
   const { upTitle, downTitle, downContent } = props;
 
   return (
-    <div className="Section__Header flex justify-between ">
+    <div className="Section__Header flex flex-wrap justify-between">
       <div className="Section__Header__Content flex flex-col gap-5">
         <span className="Section__Header_Up flex  items-center gap-4  text-base font-semibold text-main-active-color">
           <span
@@ -22,12 +22,12 @@ const SectionComponentHeader = (props) => {
           {downContent}
         </span>
       </div>
-      <div className="Section__Header__Buttons flex gap-2 self-end">
+      <div className="Section__Header__Buttons flex gap-2 self-end py-4">
         <button className="Section__Header__Button__Back   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
-          <FaArrowLeftLong size={24} />
+          <FaArrowLeftLong size={20} />
         </button>
         <button className="Section__Header__Button__Next   rounded-[50%] bg-main-form-input-color px-3 py-3     hover:bg-main-active-color hover:text-white">
-          <FaArrowRightLong size={24} />
+          <FaArrowRightLong size={20} />
         </button>
       </div>
     </div>
