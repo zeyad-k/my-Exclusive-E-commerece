@@ -8,7 +8,7 @@ const HeaderNavigation = ({ isMenuOpen }) => {
       >
         <li>
           <Link
-            className="transition duration-200 ease-in-out hover:underline  active:underline"
+            className="underline-offset-8 transition duration-200 ease-in-out hover:underline  active:underline"
             to="/"
           >
             Home
@@ -16,7 +16,7 @@ const HeaderNavigation = ({ isMenuOpen }) => {
         </li>
         <li>
           <Link
-            className="transition duration-200 ease-in-out hover:underline  active:underline"
+            className="underline-offset-8 transition duration-200 ease-in-out hover:underline  active:underline"
             to="contact"
           >
             Contact
@@ -24,7 +24,7 @@ const HeaderNavigation = ({ isMenuOpen }) => {
         </li>
         <li>
           <Link
-            className="transition duration-200 ease-in-out hover:underline  active:underline"
+            className="underline-offset-8 transition duration-200 ease-in-out hover:underline  active:underline"
             to="about"
           >
             About
@@ -32,7 +32,7 @@ const HeaderNavigation = ({ isMenuOpen }) => {
         </li>
         <li>
           <Link
-            className="transition duration-200 ease-in-out hover:underline  active:underline"
+            className="underline-offset-8 transition duration-200 ease-in-out hover:underline  active:underline"
             to="signUp"
           >
             Sign Up
