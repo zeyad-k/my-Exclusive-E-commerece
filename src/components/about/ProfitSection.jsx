@@ -11,20 +11,20 @@ const ProfitSection = () => {
     {
       serviceNumber: 33,
       serviceStatement: "Mopnthly Produduct Sale",
-      serviceIcon: "/profitsIcons/Services.svg",
-      serviceIconHover: "/profitsIcons/Services-Hover.svg",
+      serviceIcon: "/profitsIcons/Dolor.svg",
+      serviceIconHover: "/profitsIcons/Dolor-Hover.svg",
     },
     {
       serviceNumber: 45.5,
       serviceStatement: "Customer active in our site",
-      serviceIcon: "/profitsIcons/Services.svg",
-      serviceIconHover: "/profitsIcons/Services-Hover.svg",
+      serviceIcon: "/profitsIcons/Cart.svg",
+      serviceIconHover: "/profitsIcons/Cart-Hover.svg",
     },
     {
       serviceNumber: 25,
       serviceStatement: "Anual gross sale in our site",
-      serviceIcon: "/profitsIcons/Services.svg",
-      serviceIconHover: "/profitsIcons/Services-Hover.svg",
+      serviceIcon: "/profitsIcons/MonyBag.svg",
+      serviceIconHover: "/profitsIcons/MonyBag-Hover.svg",
     },
   ];
   return (
