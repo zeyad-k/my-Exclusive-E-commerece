@@ -39,16 +39,20 @@ const SectionCategories = () => {
     },
   ];
   return (
-    <section className="section-categories container flex  flex-wrap items-center justify-center gap-6 lg:flex-nowrap lg:justify-between ">
-      {categories.map((category, index) => (
-        <CategoryIconComponent
-          key={index}
-          categoryName={category.categoryName}
-          categoryIcon={category.categoryIcon}
-          categoryIconHover={category.categoryIconHover}
-        />
-      ))}
-    </section>
+    <>
+      <section className="section-categories container flex  flex-wrap items-center justify-center gap-6 lg:flex-nowrap lg:justify-between ">
+        {categories.map((category, index) => (
+          <CategoryIconComponent
+            key={index}
+            categoryName={category.categoryName}
+            categoryIcon={category.categoryIcon}
+            categoryIconHover={category.categoryIconHover}
+          />
+        ))}
+      </section>
+
+      <hr className="mt-20" />
+    </>
   );
 };
 
