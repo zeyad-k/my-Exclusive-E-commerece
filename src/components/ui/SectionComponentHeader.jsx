@@ -1,6 +1,3 @@
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import MyCountdownComponent from "./MyCountDown";
-
 const SectionComponentHeader = (props) => {
   const { upTitle, downTitle, downContent, buttons } = props;
 

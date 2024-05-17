@@ -10,8 +10,8 @@ const AboutPage = () => {
 
       <OurStory />
 
-      <section className="profits flex    flex-wrap items-center justify-center gap-3 lg:flex-nowrap">
-        <div className="sellers-active flex flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
+      <section className="profits flex      flex-wrap items-center justify-center gap-3 lg:flex-nowrap">
+        <div className="sellers-active flex h-64 w-64 flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
               className="svg-icon"
@@ -115,7 +115,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="monthly-sells flex flex-col items-center justify-center gap-2 rounded-md border border-black   border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
+        <div className="monthly-sells flex h-64 w-64 flex-col items-center justify-center gap-2 rounded-md border border-black   border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
               width="80"
@@ -162,7 +162,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="monthly-sells flex flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
+        <div className="monthly-sells flex  h-64 w-64 flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
               width="80"
@@ -192,7 +192,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="sellers-active flex flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
+        <div className="sellers-active flex  h-64 w-64 flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
               width="81"

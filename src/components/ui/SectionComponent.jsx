@@ -1,7 +1,7 @@
 import SectionComponentHeader from "./SectionComponentHeader";
 
 const SectionComponent = (props) => {
-  const { upTitle, downTitle, downContent, buttons } = props;
+  const { upTitle, downTitle, downContent, buttons, sectionBody } = props;
   return (
     <div className="container font-poppins">
       <SectionComponentHeader
@@ -11,7 +11,7 @@ const SectionComponent = (props) => {
         buttons={buttons}
       />
 
-      <div className="Section__Body"></div>
+      <div className="Section__Body mt-16">{sectionBody && sectionBody}</div>
     </div>
   );
 };

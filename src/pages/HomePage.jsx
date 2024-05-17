@@ -1,5 +1,7 @@
+import CustomerService from "../components/about/CustomerService";
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
 import MyCountdownComponent from "../components/ui/MyCountDown";
+import SectionCategories from "../components/ui/SectionCategories";
 import SectionComponent from "../components/ui/SectionComponent";
 import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
 import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
@@ -10,6 +12,7 @@ const HomePage = () => {
       <div className="container py-16 font-poppins">
         <CarouselOfferHomePage />
       </div>
+
       <SectionComponent
         upTitle={"Today’s"}
         downTitle="Flash Sale"
@@ -20,12 +23,29 @@ const HomePage = () => {
         upTitle={"Categories"}
         downTitle="Browse By Category"
         buttons={<SectionComponentNextAndBackButtons />}
+        sectionBody={<SectionCategories />}
       />
       <SectionComponent
         upTitle={"This Month"}
         downTitle="Best Selling Products"
         buttons={<ViewAllBestSellingButton />}
       />
+
+      <div className="home-page-offer container">
+        <a href="#">
+          <img src="/images/offerHomePage.png" alt="home page offer" />
+        </a>
+      </div>
+
+      <SectionComponent
+        upTitle={"Our Products"}
+        downTitle="Explore Our Products"
+        buttons={<SectionComponentNextAndBackButtons />}
+      />
+      <SectionComponent upTitle={"Featured"} downTitle="New Arrival" />
+      <div className="container">
+        <CustomerService />
+      </div>
     </div>
   );
 };
