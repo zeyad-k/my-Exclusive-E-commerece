@@ -1,6 +1,7 @@
 import CarouselWithContent from "../components/about/Carosusel";
 import CustomerService from "../components/about/CustomerService";
 import OurStory from "../components/about/OurStory";
+import ProfitSection from "../components/about/ProfitSection";
 import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 
 const AboutPage = () => {
@@ -10,7 +11,8 @@ const AboutPage = () => {
 
       <OurStory />
 
-      <section className="profits flex      flex-wrap items-center justify-center gap-3 lg:flex-nowrap">
+      <ProfitSection />
+      {/* <section className="profits flex      flex-wrap items-center justify-center gap-3 lg:flex-nowrap">
         <div className="sellers-active flex h-64 w-64 flex-col items-center justify-center gap-2 rounded-md border border-black  border-opacity-30 px-12 py-8 hover:border-none hover:bg-main-active-color hover:text-white hover:shadow-lg">
           <span>
             <svg
@@ -226,7 +228,7 @@ const AboutPage = () => {
             Anual gross sale in our site
           </p>
         </div>
-      </section>
+      </section> */}
       <CarouselWithContent />
       <CustomerService />
     </div>
