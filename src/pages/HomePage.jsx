@@ -1,7 +1,8 @@
 import CustomerService from "../components/about/CustomerService";
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
+import SectionCategories from "../components/home/SectionCategories";
+import SectionNewArrival from "../components/home/SectionNewArrival";
 import MyCountdownComponent from "../components/ui/MyCountDown";
-import SectionCategories from "../components/ui/SectionCategories";
 import SectionComponent from "../components/ui/SectionComponent";
 import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
 import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
@@ -42,7 +43,11 @@ const HomePage = () => {
         downTitle="Explore Our Products"
         buttons={<SectionComponentNextAndBackButtons />}
       />
-      <SectionComponent upTitle={"Featured"} downTitle="New Arrival" />
+      <SectionComponent
+        upTitle={"Featured"}
+        downTitle="New Arrival"
+        sectionBody={<SectionNewArrival />}
+      />
       <div className="container">
         <CustomerService />
       </div>
