@@ -1,5 +1,6 @@
 import CustomerService from "../components/about/CustomerService";
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
+import FlashSaleSection from "../components/home/FlashSaleSection";
 import SectionCategories from "../components/home/SectionCategories";
 import SectionNewArrival from "../components/home/SectionNewArrival";
 import MyCountdownComponent from "../components/ui/MyCountDown";
@@ -19,6 +20,7 @@ const HomePage = () => {
         downTitle="Flash Sale"
         downContent={<MyCountdownComponent />}
         buttons={<SectionComponentNextAndBackButtons />}
+        sectionBody={<FlashSaleSection />}
       />
       <SectionComponent
         upTitle={"Categories"}
