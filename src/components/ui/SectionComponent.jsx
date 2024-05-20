@@ -3,7 +3,7 @@ import SectionComponentHeader from "./SectionComponentHeader";
 const SectionComponent = (props) => {
   const { upTitle, downTitle, downContent, buttons, sectionBody } = props;
   return (
-    <div className="container font-poppins">
+    <div className="container overflow-x-hidden font-poppins">
       <SectionComponentHeader
         upTitle={upTitle}
         downTitle={downTitle}
