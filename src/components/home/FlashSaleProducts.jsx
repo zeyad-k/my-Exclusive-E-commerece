@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import ProductItemComponent from "../ui/ProductItemComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { Navigation } from "swiper/modules";
+// import { Navigation } from "swiper";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 
-const FlashSaleSection = () => {
+const FlashSaleProducts = () => {
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -57,6 +59,11 @@ const FlashSaleSection = () => {
               slidesPerView: 3,
             },
           }}
+          navigation={{
+            prevEl: "#swiper-button-prev",
+            nextEl: "#swiper-button-next",
+          }}
+          modules={[Navigation]}
         >
           {result.map((product) => (
             <SwiperSlide key={product.id} className="mx-auto !min-w-[310px]">
@@ -70,4 +77,4 @@ const FlashSaleSection = () => {
   );
 };
 
-export default FlashSaleSection;
+export default FlashSaleProducts;

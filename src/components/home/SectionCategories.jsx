@@ -51,7 +51,7 @@ const SectionCategories = () => {
         ))}
       </section>
 
-      <hr className="mt-20" />
+      <hr className="mt-20 border" />
     </>
   );
 };

@@ -29,7 +29,7 @@ import ProductItemComponent from "./ProductItemComponent";
 // import { useSnapshot } from "valtio";
 // import { state } from "@/store/valtio";
 
-const FeaturedProducts = () => {
+const BestSellingProducts = () => {
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -90,4 +90,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default BestSellingProducts;

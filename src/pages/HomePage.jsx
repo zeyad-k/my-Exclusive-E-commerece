@@ -1,13 +1,14 @@
 import CustomerService from "../components/about/CustomerService";
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
-import FlashSaleSection from "../components/home/FlashSaleSection";
+import FlashSaleSection from "../components/home/FlashSaleProducts";
 import SectionCategories from "../components/home/SectionCategories";
 import SectionNewArrival from "../components/home/SectionNewArrival";
 import MyCountdownComponent from "../components/ui/MyCountDown";
 import SectionComponent from "../components/ui/SectionComponent";
 import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
-import FeaturedProducts from "../components/ui/Swiper";
 import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
+import BestSellingProducts from "../components/ui/BestSellingProducts";
+import SectionFlashSale from "../components/home/SectionFlashSale";
 
 const HomePage = () => {
   return (
@@ -21,7 +22,7 @@ const HomePage = () => {
         downTitle="Flash Sale"
         downContent={<MyCountdownComponent />}
         buttons={<SectionComponentNextAndBackButtons />}
-        sectionBody={<FlashSaleSection />}
+        sectionBody={<SectionFlashSale />}
       />
       <SectionComponent
         upTitle={"Categories"}
@@ -33,7 +34,7 @@ const HomePage = () => {
         upTitle={"This Month"}
         downTitle="Best Selling Products"
         buttons={<ViewAllBestSellingButton />}
-        sectionBody={<FeaturedProducts />}
+        sectionBody={<BestSellingProducts />}
       />
 
       <div className="home-page-offer container">
