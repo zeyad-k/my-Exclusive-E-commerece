@@ -6,6 +6,7 @@ import SectionNewArrival from "../components/home/SectionNewArrival";
 import MyCountdownComponent from "../components/ui/MyCountDown";
 import SectionComponent from "../components/ui/SectionComponent";
 import SectionComponentNextAndBackButtons from "../components/ui/SectionComponentNextAndBackButtons";
+import FeaturedProducts from "../components/ui/Swiper";
 import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
 
 const HomePage = () => {
@@ -32,6 +33,7 @@ const HomePage = () => {
         upTitle={"This Month"}
         downTitle="Best Selling Products"
         buttons={<ViewAllBestSellingButton />}
+        sectionBody={<FeaturedProducts />}
       />
 
       <div className="home-page-offer container">

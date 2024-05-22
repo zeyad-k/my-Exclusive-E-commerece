@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import ProductItemComponent from "../ui/ProductItemComponent";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const FlashSaleSection = () => {
   const [result, setResult] = useState(null);
@@ -34,10 +38,33 @@ const FlashSaleSection = () => {
 
   return (
     <div className="flash-sale-section">
-      <div className="flash-sale-products flex w-screen gap-2">
-        {result.map((product) => (
-          <ProductItemComponent key={product.id} result={product} />
-        ))}
+      <div className="paddings innerWidth -z-[1]">
+        {/* <div className="flash-sale-products flex w-screen gap-2"> */}
+        <Swiper
+          className="w-full"
+          spaceBetween={23}
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 2,
+            },
+            750: {
+              slidesPerView: 2,
+            },
+            1100: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {result.map((product) => (
+            <SwiperSlide key={product.id} className="mx-auto !min-w-[310px]">
+              <ProductItemComponent key={product.id} result={product} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* </div> */}
       </div>
     </div>
   );
