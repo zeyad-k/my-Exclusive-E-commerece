@@ -1,6 +1,5 @@
 import CustomerService from "../components/about/CustomerService";
 import CarouselOfferHomePage from "../components/home/CarouselOfferHomePage";
-import FlashSaleSection from "../components/home/FlashSaleProducts";
 import SectionCategories from "../components/home/SectionCategories";
 import SectionNewArrival from "../components/home/SectionNewArrival";
 import MyCountdownComponent from "../components/ui/MyCountDown";
@@ -9,12 +8,39 @@ import SectionComponentNextAndBackButtons from "../components/ui/SectionComponen
 import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton";
 import BestSellingProducts from "../components/ui/BestSellingProducts";
 import SectionFlashSale from "../components/home/SectionFlashSale";
+import { AccordionCustomIcon } from "../components/ui/Accordion";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col gap-20">
-      <div className="container py-16 font-poppins">
-        <CarouselOfferHomePage />
+      <div className="container flex    font-poppins">
+        <div className="categories-menu   hidden border-r-[.5px]   border-black/30 pt-16   lg:block">
+          {" "}
+          <ul className="flex  min-w-[230px] flex-col gap-4 text-base font-normal">
+            <li>
+              <AccordionCustomIcon
+                accordionHeader="Woman’s Fashion"
+                accordionBody="sub Categories"
+              />
+            </li>
+            <li>
+              <AccordionCustomIcon
+                accordionHeader="Men’s Fashion"
+                accordionBody="sub Categories"
+              />
+            </li>
+            <li>Electronics</li>
+            <li>Home & Lifestyle</li>
+            <li>Medicine</li>
+            <li>Sports & Outdoor</li>
+            <li>Baby’s & Toys</li>
+            <li>Groceries & Pets</li>
+            <li>Health & Beauty</li>
+          </ul>
+        </div>
+        <div className="px-10 pt-16">
+          <CarouselOfferHomePage />
+        </div>
       </div>
 
       <SectionComponent
