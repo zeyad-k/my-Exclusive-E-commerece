@@ -17,7 +17,7 @@ export function BlockLevelBreadcrumbs() {
         return isLast ? (
           <span key={to}>{value}</span>
         ) : (
-          <Link key={to} to={to} className="text-black opacity-60">
+          <Link key={to} to={to} className="capitalize   text-black opacity-60">
             {value}
           </Link>
         );
