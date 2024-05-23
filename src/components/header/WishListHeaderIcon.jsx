@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const WishHeaderIcon = () => {
+const WishListHeaderIcon = () => {
   return (
     <Link to="wishlist" className="header-icons wish-icon">
       <svg
@@ -22,4 +22,4 @@ const WishHeaderIcon = () => {
   );
 };
 
-export default WishHeaderIcon;
+export default WishListHeaderIcon;

@@ -1,12 +1,13 @@
+import CartHeaderIcon from "./CartHeaderIcon";
 import SearchInput from "./SearchInput";
-import WishHeaderIcon from "./WishHeaderIcon";
+import WishListHeaderIcon from "./WishListHeaderIcon";
 
 const HeaderIcons = () => {
   return (
     <div className="flex items-center gap-2">
       <SearchInput />
-      <WishHeaderIcon />
-
+      <WishListHeaderIcon />
+      <CartHeaderIcon />
       <div className="header-icons cart-icon">
         <svg
           width="32"
