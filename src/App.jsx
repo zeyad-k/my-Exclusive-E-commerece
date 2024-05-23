@@ -6,6 +6,7 @@ import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import WishlistPage from "./pages/WishlistPage";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
-          <Route path="wishlist" element={<ContactPage />} />
+          <Route path="wishlist" element={<WishlistPage />} />
           <Route path="cart" element={<ContactPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
