@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import WishlistPage from "./pages/WishlistPage";
+import CartPage from "./pages/CartPage";
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="wishlist" element={<WishlistPage />} />
-          <Route path="cart" element={<ContactPage />} />
+          <Route path="cart" element={<CartPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
