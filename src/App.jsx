@@ -18,6 +18,8 @@ export default function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="wishlist" element={<ContactPage />} />
+          <Route path="cart" element={<ContactPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
