@@ -35,9 +35,10 @@ const WishlistPage = () => {
                 src={item.img}
                 alt={item.name}
               />
-              <p>{item.name}</p>
+              <div className=" text-base  font-medium"></div>
+              <p className=" ">{item.name}</p>
               <p className="flex gap-2">
-                <span>${item.price}</span>
+                <span className="">${item.price}</span>
                 <span>${item.discountedPrice}</span>
               </p>
             </div>
