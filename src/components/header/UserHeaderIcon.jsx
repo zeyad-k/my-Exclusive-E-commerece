@@ -14,6 +14,8 @@ import {
   HiOutlineMail,
   HiUserCircle,
 } from "react-icons/hi";
+import LogoutButton from "./LogoutButton";
+
 // profile menu component
 const profileMenuItems = [
   {
@@ -37,6 +39,7 @@ const profileMenuItems = [
     icon: HiCog,
   },
 ];
+
 const UserHeaderIcon = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -75,7 +78,9 @@ const UserHeaderIcon = () => {
           </svg>
         </Button>
       </MenuHandler>
+
       <MenuList className="p-1">
+        <LogoutButton />
         {profileMenuItems.map(({ label, icon }, key) => {
           const isLastItem = key === profileMenuItems.length - 1;
           return (
