@@ -79,9 +79,9 @@ const UserHeaderIcon = () => {
         </Button>
       </MenuHandler>
 
-      <MenuList className="p-1">
+      <MenuList className=" to-black/800 flex flex-col border-none bg-transparent/30  bg-gradient-to-r from-gray-800  via-purple-800 p-1 px-2 font-poppins text-sm font-normal text-white backdrop-blur-sm backdrop-brightness-50   ">
         <LogoutButton />
-        {profileMenuItems.map(({ label, icon }, key) => {
+        {/* {profileMenuItems.map(({ label, icon }, key) => {
           const isLastItem = key === profileMenuItems.length - 1;
           return (
             <MenuItem
@@ -107,7 +107,7 @@ const UserHeaderIcon = () => {
               </Typography>
             </MenuItem>
           );
-        })}
+        })} */}
       </MenuList>
     </Menu>
   );
