@@ -1,14 +1,37 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { firebaseAuth } from "../../utils/Firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const initialState = { email: "", password: "" };
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState(initialState);
+  const [error, setError] = useState("");
 
-  const handleChange = () => {};
+  const handleChange = ({ target }) => {
+    setInput({ ...input, [target.name]: target.value });
+    setError("");
+  };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    console.log(input);
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        firebaseAuth,
+        input.email,
+        input.password,
+      );
+      setInput(initialState);
+      navigate("/");
+    } catch (error) {
+      setError(error.message);
+      console.log(error);
+    }
+  };
 
   return (
     <div className="flex w-full flex-1 lg:justify-end">
@@ -21,6 +44,7 @@ const LoginForm = () => {
             Log in to Exclusive
           </h2>
           <p>Enter your details below</p>
+          <p className="form__error text-red-500">{error}</p>
         </span>
 
         <span className="form-inputs mb-10 flex flex-col gap-10">
@@ -28,7 +52,7 @@ const LoginForm = () => {
             placeholder="Email"
             className="border-b-2   focus:text-main-active-color focus:outline-none"
             type="email"
-            name="user_email"
+            name="email"
             value={input.email}
             onChange={handleChange}
           />
@@ -36,7 +60,7 @@ const LoginForm = () => {
             placeholder="Password"
             className="border-b-2   focus:text-main-active-color focus:outline-none"
             type="password"
-            name="user_password"
+            name="password"
             value={input.password}
             onChange={handleChange}
           />

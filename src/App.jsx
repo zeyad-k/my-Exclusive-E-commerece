@@ -15,6 +15,7 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          {/* <Switch></Switch> */}
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
             {/* <Route path=":country" element={<Country />} /> */}
