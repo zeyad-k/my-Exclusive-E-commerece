@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 const CartHeaderIcon = () => {
   return (
-    <Link to="cart" className="header-icons cart-icon">
+    <Link
+      to="cart"
+      className="header-icons cart-icon rounded-2xl hover:bg-gray-500/10 focus:bg-red-500/10 active:bg-blue-500/10"
+    >
       <svg
         width="32"
         height="32"

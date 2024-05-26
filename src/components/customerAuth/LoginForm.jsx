@@ -1,11 +1,14 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useInRouterContext, useNavigate } from "react-router-dom";
 import { firebaseAuth } from "../../utils/Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { AuthContext } from "../../context/Auth";
 
 const initialState = { email: "", password: "" };
 
 const LoginForm = () => {
+  const { setUser } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const [input, setInput] = useState(initialState);
   const [error, setError] = useState("");
@@ -25,11 +28,29 @@ const LoginForm = () => {
         input.email,
         input.password,
       );
+      setUser(userCredential.user);
       setInput(initialState);
       navigate("/");
     } catch (error) {
-      setError(error.message);
-      console.log(error);
+      let errorMessage;
+      switch (error.code) {
+        case "auth/invalid-email":
+          errorMessage = "The email / password address is not valid.";
+          break;
+        case "auth/user-disabled":
+          errorMessage =
+            "The user corresponding to the given email has been disabled.";
+          break;
+        case "auth/user-not-found":
+          errorMessage = "There is no user corresponding to the given email.";
+          break;
+        case "auth/wrong-password":
+          errorMessage = "The email / password address is not valid.";
+          break;
+        default:
+          errorMessage = "The email / password address is not valid.";
+      }
+      setError(errorMessage);
     }
   };
 

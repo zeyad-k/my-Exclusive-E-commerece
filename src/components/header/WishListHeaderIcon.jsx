@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 const WishListHeaderIcon = () => {
   return (
-    <Link to="wishlist" className="header-icons wish-icon">
+    <Link
+      to="wishlist"
+      className="header-icons wish-icon rounded-2xl hover:bg-gray-500/10 focus:bg-red-500/10 active:bg-blue-500/10"
+    >
       <svg
         width="32"
         height="32"
