@@ -14,7 +14,7 @@ const LogoutButton = () => {
 
   return (
     <button
-      className="  flex items-center gap-2 rounded px-4 py-2 hover:bg-red-900/70 focus:bg-red-500/65 active:bg-red-500/65"
+      className=" flex items-center gap-2 rounded px-4 py-2 hover:bg-red-400/70 focus:bg-red-500/65 active:bg-red-500/75"
       onClick={logout}
     >
       <img src="/images/Icon-logout.svg" alt="" />
