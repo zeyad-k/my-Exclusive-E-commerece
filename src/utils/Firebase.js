@@ -35,4 +35,5 @@ import { getAuth } from "firebase/auth";
 };
 
 const app = initializeApp(firebaseConfig);
+export {app};
 export const firebaseAuth = getAuth(app);
