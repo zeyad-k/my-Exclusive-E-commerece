@@ -1,4 +1,3 @@
-import { TbLogout2 } from "react-icons/tb";
 import { firebaseAuth } from "../../utils/Firebase";
 
 const LogoutButton = () => {
