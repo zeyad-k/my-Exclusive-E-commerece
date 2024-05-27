@@ -59,7 +59,7 @@ const ProductItemComponent = ({ result }) => {
         </button>
 
         <Link
-          to={`/product/${result.id}`}
+          to={`/${result.id}`}
           className="absolute right-2 top-16 z-50 flex items-center justify-center rounded-full bg-gray-100 p-2.5"
         >
           <EyeIcon />
