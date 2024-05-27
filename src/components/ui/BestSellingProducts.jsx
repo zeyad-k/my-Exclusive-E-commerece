@@ -73,10 +73,13 @@ const BestSellingProducts = () => {
             slidesPerView: 2,
           },
           750: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           1100: {
-            slidesPerView: 3,
+            slidesPerView: 4,
+          },
+          1600: {
+            slidesPerView: 5,
           },
         }}
       >
