@@ -16,6 +16,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store } from "./store";
 import Loading from "./pages/loading";
 import AllProductsPage from "./pages/AllProductsPage";
+import ProductPage from "./pages/ProductPage";
 export default function App() {
   const persistor = persistStore(store);
   return (
@@ -24,10 +25,9 @@ export default function App() {
         <AuthProvider>
           <BrowserRouter>
             <Routes>
-               
               <Route path="/" element={<Layout />}>
                 <Route index element={<HomePage />} />
-                {/* <Route path=":country" element={<Country />} /> */}
+                <Route path="product/:id" element={<ProductPage />} />
                 <Route path="signUp" element={<SignUpPage />} />
                 <Route path="login" element={<LoginPage />} />
                 <Route path="forgotPassword" element={<ForgetPasswordPage />} />

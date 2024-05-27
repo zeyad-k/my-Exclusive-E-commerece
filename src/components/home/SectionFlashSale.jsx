@@ -1,10 +1,14 @@
+import ViewAllProductsButton from "../ui/ViewAllProductsButton";
 import FlashSaleProducts from "./FlashSaleProducts";
 
 const SectionFlashSale = () => {
   return (
-    <div className="section-flash-sale">
+    <div className="section-flash-sale flex flex-col  gap-16 ">
       <FlashSaleProducts />
-      <hr className=" mt-20  border" />
+      <span className="flex items-center justify-center">
+        <ViewAllProductsButton className="" />
+      </span>
+      <hr className="   border" />
     </div>
   );
 };

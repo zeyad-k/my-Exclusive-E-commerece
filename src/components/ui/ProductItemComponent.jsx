@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../store/cartSlice";
 import { addToWishlist, removeFromWishlist } from "../../store/wishlistSlice";
 import { useState } from "react";
-import { Heart } from "lucide-react";
+import { EyeIcon, Heart } from "lucide-react";
 import ProductDiscount from "./ProductDiscount";
 import StarRating from "./StarReating";
+import { Link } from "react-router-dom";
 
 const ProductItemComponent = ({ result }) => {
   const dispatch = useDispatch();
@@ -56,6 +57,13 @@ const ProductItemComponent = ({ result }) => {
         >
           <Heart className={`${isInWishList && "fill-red-500 text-red-500"}`} />
         </button>
+
+        <Link
+          to={`/product/${result.id}`}
+          className="absolute right-2 top-16 z-50 flex items-center justify-center rounded-full bg-gray-100 p-2.5"
+        >
+          <EyeIcon />
+        </Link>
       </div>
       <div className="group relative">
         <img
