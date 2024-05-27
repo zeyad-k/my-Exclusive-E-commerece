@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 // import { Navigation } from "swiper";
 // import "swiper/css";
 // import "swiper/css/navigation";
@@ -73,7 +73,7 @@ const FlashSaleProducts = () => {
           modules={[Navigation]}
         >
           {result.map((product) => (
-            <SwiperSlide key={product.id} className="mx-auto !min-w-[310px]">
+            <SwiperSlide key={product.id} className="mx-auto !min-w-[320px]">
               <ProductItemComponent key={product.id} result={product} />
             </SwiperSlide>
           ))}
