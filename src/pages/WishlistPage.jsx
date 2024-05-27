@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  removeFromWishlist,
+  // removeFromWishlist,
   removeAllFromWishlist,
 } from "../store/wishlistSlice";
-import { updateQuantity } from "../store/cartSlice";
+// import { updateQuantity } from "../store/cartSlice";
 import { addItem as addItemToCart } from "../store/cartSlice";
 import ProductItemComponent from "../components/ui/ProductItemComponent";
 import JustForyouSection from "../components/Wishlist/JustForyouSection";
@@ -42,7 +41,7 @@ const WishlistPage = () => {
   };
 
   return (
-    <div className="container my-4 flex flex-col gap-32 font-poppins lg:my-10">
+    <div className="container my-4 flex flex-col gap-10 font-poppins lg:my-10">
       <BlockLevelBreadcrumbs />
 
       <div className="flex flex-col justify-center gap-4">

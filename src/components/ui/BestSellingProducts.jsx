@@ -1,33 +1,8 @@
-// import FlashSaleSection from "../home/FlashSaleSection";
-
-// export default function Swiper() {
-//   return (
-//     <>
-//       <main>
-//         <swiper-container>
-//           <swiper-slide>
-//             <span className=" bg-main-active-color">
-//               <FlashSaleSection />
-//             </span>{" "}
-//           </swiper-slide>
-//           <swiper-slide>Slide2</swiper-slide>
-//           {/* <swiper-slide>Slide3</swiper-slide>
-//           <swiper-slide>Slide4</swiper-slide>
-//           <swiper-slide>Slide5</swiper-slide> */}
-//         </swiper-container>
-//       </main>
-//     </>
-//   );
-// }
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
 import ProductItemComponent from "./ProductItemComponent";
-// import { useSnapshot } from "valtio";
-// import { state } from "@/store/valtio";
 
 const BestSellingProducts = () => {
   const [result, setResult] = useState(null);
@@ -35,7 +10,7 @@ const BestSellingProducts = () => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=6")
+    fetch("https://fakestoreapi.com/products?limit=4")
       .then((res) => res.json())
       .then((json) => {
         setResult(json);
@@ -61,35 +36,41 @@ const BestSellingProducts = () => {
   }
   // const { most_visited_products } = useSnapshot(state);
   return (
-    <div className="paddings innerWidth -z-[1]">
-      <Swiper
-        className="w-full"
-        spaceBetween={23}
-        breakpoints={{
-          480: {
-            slidesPerView: 1,
-          },
-          600: {
-            slidesPerView: 2,
-          },
-          750: {
-            slidesPerView: 3,
-          },
-          1100: {
-            slidesPerView: 4,
-          },
-          1600: {
-            slidesPerView: 5,
-          },
-        }}
-      >
-        {result.map((product) => (
-          <SwiperSlide key={product.id} className="mx-auto !min-w-[310px]">
-            <ProductItemComponent key={product.id} result={product} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="section-body grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    ">
+      {result.map((item, index) => (
+        <ProductItemComponent result={item} key={index} />
+      ))}
     </div>
+
+    // <div className="paddings innerWidth -z-[1]">
+    //   <Swiper
+    //     className="w-full"
+    //     spaceBetween={23}
+    //     breakpoints={{
+    //       480: {
+    //         slidesPerView: 1,
+    //       },
+    //       600: {
+    //         slidesPerView: 2,
+    //       },
+    //       750: {
+    //         slidesPerView: 3,
+    //       },
+    //       1100: {
+    //         slidesPerView: 4,
+    //       },
+    //       1600: {
+    //         slidesPerView: 5,
+    //       },
+    //     }}
+    //   >
+    //     {result.map((product) => (
+    //       <SwiperSlide key={product.id} className="mx-auto !min-w-[310px]">
+    //         <ProductItemComponent key={product.id} result={product} />
+    //       </SwiperSlide>
+    //     ))}
+    //   </Swiper>
+    // </div>
   );
 };
 

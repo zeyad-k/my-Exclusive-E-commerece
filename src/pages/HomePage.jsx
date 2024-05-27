@@ -9,6 +9,7 @@ import ViewAllBestSellingButton from "../components/ui/ViewAllBestSellingButton"
 import BestSellingProducts from "../components/ui/BestSellingProducts";
 import SectionFlashSale from "../components/home/SectionFlashSale";
 import { AccordionCustomIcon } from "../components/ui/Accordion";
+import ExploreOurProducts from "../components/ui/ExploreOurProducts";
 
 const HomePage = () => {
   return (
@@ -73,6 +74,7 @@ const HomePage = () => {
         upTitle={"Our Products"}
         downTitle="Explore Our Products"
         buttons={<SectionComponentNextAndBackButtons />}
+        sectionBody={<ExploreOurProducts />}
       />
       <SectionComponent
         upTitle={"Featured"}

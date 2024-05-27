@@ -46,7 +46,7 @@ const JustForyouSection = () => {
         </span>
 
         <Link
-          to="allProducts"
+          to="/allProducts"
           className="rounded-md border border-black px-12 py-4 hover:border-white hover:bg-main-active-color hover:text-white"
         >
           See All
