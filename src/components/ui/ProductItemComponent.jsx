@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../store/cartSlice";
-import { addToWishlist } from "../../store/wishlistSlice";
+import { addToWishlist, removeFromWishlist } from "../../store/wishlistSlice";
 import { useState } from "react";
 import { Heart } from "lucide-react";
+import ProductDiscount from "./ProductDiscount";
+import StarRating from "./StarReating";
 
 const ProductItemComponent = ({ result }) => {
   const dispatch = useDispatch();
@@ -29,21 +31,30 @@ const ProductItemComponent = ({ result }) => {
   };
 
   const handleAddToWishlist = () => {
-    const item = { id: result.id, ...result };
-    dispatch(addToWishlist(item));
+    if (!isInWishList) {
+      const item = { id: result.id, ...result };
+      dispatch(addToWishlist(item));
+    } else {
+      dispatch(removeFromWishlist(result.id));
+    }
   };
 
   return (
     <div className="m-4 h-[400px] w-64 overflow-hidden rounded-lg border p-3">
       <div className="relative w-full ">
-        <div className="absolute left-2 top-2 z-50 rounded-lg bg-red-500 px-2 py-1 text-white">
-          -{result.discountPercentage}%{" "}
-        </div>
+        {result.id == 1 ? (
+          <ProductDiscount discount={5} />
+        ) : (
+          result.discountPercentage && (
+            <ProductDiscount discount={result.discountPercentage} />
+          )
+        )}
+
         <button
           onClick={handleAddToWishlist}
           className="absolute right-2 top-2 z-50 flex items-center justify-center rounded-full bg-gray-100 p-2.5"
         >
-          <Heart  className={`${isInWishList && "fill-red-500 text-red-500"}`} />
+          <Heart className={`${isInWishList && "fill-red-500 text-red-500"}`} />
         </button>
       </div>
       <div className="group relative">
@@ -62,22 +73,15 @@ const ProductItemComponent = ({ result }) => {
 
       <div className="p-4">
         <h2 className="line-clamp-1 text-lg font-semibold ">{result.title}</h2>
-        <div className="mt-2 flex items-center justify-between">
-          <span className="text-xl font-bold text-red-500">
+        <div className="mt-2 flex items-center gap-4 text-lg  font-semibold">
+          <span className="font-semiBold text-lg  text-main-active-color">
             ${result.price}
           </span>
-          {result.oldPrice && (
-            <span className="text-gray-500 line-through">
-              ${result.oldPrice}
-            </span>
+          {result.id == 1 && (
+            <span className="text-black/65 line-through">${result.price}</span>
           )}
         </div>
-        <div className="mt-2  text-main-star-color">
-          {"★".repeat(result.rating ? Math.round(result.rating.rate) : 0)}{" "}
-          <span className="text-gray-600">
-            ({result.rating ? result.rating.count : 0})
-          </span>
-        </div>
+        <StarRating rating={result.rating} />
       </div>
     </div>
   );
