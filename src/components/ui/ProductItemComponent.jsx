@@ -19,15 +19,15 @@ const ProductItemComponent = ({ result }) => {
 
   const isInCart = CartItems.filter((item) => item.id === result.id).length > 0;
 
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
+  // const handleDecrement = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
 
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
+  // const handleIncrement = () => {
+  //   setQuantity(quantity + 1);
+  // };
 
   const handleAddToCart = () => {
     if (!isInCart) {

@@ -3,10 +3,23 @@ import { Link } from "react-router-dom";
 
 const CartBill = () => {
   const cartItems = useSelector((state) => state.cart.items);
-  const totalPrice = cartItems
-    .reduce((total, item) => total + item.price * item.quantity, 0)
-    .toFixed(2);
+  // const totalPrice = cartItems
+  //   .reduce((total, item) => total + item.price * item.quantity, 0)
+  //   .toFixed(2)
+  //   ;
 
+const totalPrice = cartItems
+  ? cartItems
+      .reduce(
+        (total, item) =>
+          total +
+          (typeof item.price === 'number' && typeof item.quantity === 'number'
+            ? item.price * item.quantity
+            : 0),
+        0
+      )
+      .toFixed(2)
+  : '0.00';
   return (
     <div className="Cart__Bill flex min-w-[370px] flex-col gap-6 rounded border-2 border-black px-6 py-8 ">
       <h2 className="bill_header text-xl font-medium"> Cart Total</h2>

@@ -11,6 +11,8 @@ import JustForyouSection from "../components/Wishlist/JustForyouSection";
 
 const WishlistPage = () => {
   const wishlistItems = useSelector((state) => state.wishlist.items);
+  const CartItems = useSelector((state) => state.cart.items);
+
   const dispatch = useDispatch();
 
   // Function to handle removing an item from the cart
@@ -32,8 +34,12 @@ const WishlistPage = () => {
 
   const handleAddAllToCart = () => {
     wishlistItems.forEach((product) => {
-      console.log(product);
-      dispatch(addItemToCart(product));
+      const isInCart =
+        CartItems.filter((item) => item.id === product.id).length > 0;
+
+      if (!isInCart) {
+        dispatch(addItemToCart(product));
+      }
     });
 
     // Dispatch action to remove all wishlist items

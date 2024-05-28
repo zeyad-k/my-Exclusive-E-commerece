@@ -1,14 +1,20 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeItem, updateQuantity } from "../../store/cartSlice";
-import { useState } from "react";
+// import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const CartItemComponent = ({ result }) => {
   const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart.items);
+
+  // Find the current item in the cart
+  const cartItem = cartItems.find((item) => item.id === result.id);
+  const quantity = cartItem ? cartItem.quantity : 1;
+
   //   const wishlistItems = useSelector((state) => state.wishlist.items);
   //   const cartItems = useSelector((state) => state.cart.items);
 
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
 
   //   const isInWishList =
   //     wishlistItems.filter((item) => item.id === result.id).length > 0;
@@ -16,13 +22,13 @@ const CartItemComponent = ({ result }) => {
 
   const handleDecrement = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      // setQuantity(quantity - 1);
       dispatch(updateQuantity({ id: result.id, quantity: quantity - 1 }));
     }
   };
 
   const handleIncrement = () => {
-    setQuantity(quantity + 1);
+    // setQuantity(quantity + 1);
     dispatch(updateQuantity({ id: result.id, quantity: quantity + 1 }));
   };
 
