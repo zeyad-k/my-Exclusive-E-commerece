@@ -10,11 +10,14 @@ import { Link } from "react-router-dom";
 const ProductItemComponent = ({ result }) => {
   const dispatch = useDispatch();
   const wishlistItems = useSelector((state) => state.wishlist.items);
+  const CartItems = useSelector((state) => state.cart.items);
 
   const [quantity, setQuantity] = useState(1);
 
   const isInWishList =
     wishlistItems.filter((item) => item.id === result.id).length > 0;
+
+  const isInCart = CartItems.filter((item) => item.id === result.id).length > 0;
 
   const handleDecrement = () => {
     if (quantity > 1) {
@@ -27,8 +30,10 @@ const ProductItemComponent = ({ result }) => {
   };
 
   const handleAddToCart = () => {
-    const item = { id: result.id, quantity, ...result };
-    dispatch(addItem(item));
+    if (!isInCart) {
+      const item = { id: result.id, quantity, ...result };
+      dispatch(addItem(item));
+    }
   };
 
   const handleAddToWishlist = () => {
