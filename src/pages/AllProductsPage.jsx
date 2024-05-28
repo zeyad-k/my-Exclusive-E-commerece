@@ -37,6 +37,8 @@ const AllProductsPage = () => {
   return (
     <div className="container my-4 flex flex-col gap-10 font-poppins lg:my-10">
       <BlockLevelBreadcrumbs />
+      <h1 className="text-2xl font-semibold">All Products</h1>
+
       <div className="grid  gap-4">
         <div className="section-body grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    ">
           {result.map((item, index) => (
@@ -44,7 +46,7 @@ const AllProductsPage = () => {
           ))}
         </div>
       </div>
-      ;
+      
     </div>
   );
 };

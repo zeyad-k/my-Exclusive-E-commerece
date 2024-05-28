@@ -10,6 +10,7 @@ import BestSellingProducts from "../components/ui/BestSellingProducts";
 import SectionFlashSale from "../components/home/SectionFlashSale";
 import { AccordionCustomIcon } from "../components/ui/Accordion";
 import ExploreOurProducts from "../components/ui/ExploreOurProducts";
+import GoUpButton from "../components/ui/GoUpButton";
 
 const HomePage = () => {
   return (
@@ -83,6 +84,10 @@ const HomePage = () => {
       />
       <div className="container">
         <CustomerService />
+      </div>
+
+      <div className="container py-10">
+        <GoUpButton />
       </div>
     </div>
   );
