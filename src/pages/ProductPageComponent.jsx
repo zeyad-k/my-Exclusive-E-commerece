@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Loading from "./loading";
-import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
-import ProductItemComponent from "../components/ui/ProductItemComponent";
+import ProductPageComponentImageSection from "./ProductPageComponentImageSection";
+import ProductPageComponentInfoSection from "./ProductPageComponentInfoSection";
+// import { BlockLevelBreadcrumbs } from "../components/ui/BlockLevelBreadcrumbs";
+// import ProductItemComponent from "../components/ui/ProductItemComponent";
 
 const ProductPageComponent = (props) => {
   const { productId } = props;
@@ -38,14 +40,18 @@ const ProductPageComponent = (props) => {
   }
 
   return (
- 
-    <div className="grid  gap-4">
-      <div className="section-body grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <ProductItemComponent result={product} key={product.id} />
-      </div>
-    </div>
+    <div className="grid  grid-cols-2 gap-20">
+      {/* <div className="section-images grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"> */}
+      {/* <div className="section-images grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"> */}
+      <ProductPageComponentImageSection
+        productImage={product.image}
+        product={product}
+      />
+      <ProductPageComponentInfoSection product={product} />
 
-   );
+      {/* </div> */}
+    </div>
+  );
 };
 
 export default ProductPageComponent;

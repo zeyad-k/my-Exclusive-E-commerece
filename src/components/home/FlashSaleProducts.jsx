@@ -48,22 +48,22 @@ const FlashSaleProducts = () => {
         {/* <div className="flash-sale-products flex w-screen gap-2"> */}
         <Swiper
           className="w-full"
-          spaceBetween={23}
+          spaceBetween={20}
           breakpoints={{
             480: {
               slidesPerView: 1,
             },
             600: {
-              slidesPerView: 2,
+              slidesPerView: 1,
             },
             750: {
               slidesPerView: 3,
             },
             1100: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
             1600: {
-              slidesPerView: 5,
+              slidesPerView: 3,
             },
           }}
           navigation={{
@@ -73,8 +73,10 @@ const FlashSaleProducts = () => {
           modules={[Navigation]}
         >
           {result.map((product) => (
-            <SwiperSlide key={product.id} className="mx-auto !min-w-[320px]">
-              <ProductItemComponent key={product.id} result={product} />
+            <SwiperSlide key={product.id} className="mx-auto   ">
+              <div className="sm:flex sm:justify-center">
+                <ProductItemComponent key={product.id} result={product} />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

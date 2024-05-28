@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
 const StarRating = (props) => {
-  const { rating } = props;
+  const { rating, reviews } = props;
 
   //   const [rating, setRating] = useState(0);
 
@@ -15,7 +15,7 @@ const StarRating = (props) => {
         {[1, 2, 3, 4, 5].map((star) => (
           <label
             key={star}
-            className={`cursor-pointer  text-lg transition-colors ${
+            className={`mx-1 cursor-pointer text-lg transition-colors ${
               rating.rate >= star ? " text-main-star-color" : "text-gray-400"
             }`}
             // onClick={() => handleRating(star)}
@@ -24,7 +24,9 @@ const StarRating = (props) => {
           </label>
         ))}
       </div>
-      <span className="text-gray-600">({rating ? rating.count : 0})</span>
+      <span className="text-gray-600">
+        ({rating ? rating.count : 0} {reviews && "reviews"})
+      </span>
     </div>
   );
 };

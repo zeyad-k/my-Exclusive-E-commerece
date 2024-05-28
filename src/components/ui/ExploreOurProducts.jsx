@@ -33,17 +33,17 @@ const ExploreOurProducts = () => {
     return null;
   }
   return (
-    <div className="container flex flex-col   items-center gap-12">
+    <div className="container flex flex-col   items-center gap-12  ">
     
-      <div className="section-body grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    ">
+      <div className="section-body grid justify-items-center gap-6  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4    ">
         {result.map((item, index) => (
           <ProductItemComponent result={item} key={index} />
         ))}
       </div>
 
-      <span className="flex items-center justify-center">
-        <ViewAllProductsButton className="" />
-      </span>
+      {/* <span className="flex items-center justify-center">
+        <ViewAllProductsButton className="  mb-2" />
+      </span> */}
      
     </div>
   );

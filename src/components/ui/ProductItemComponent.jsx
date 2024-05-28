@@ -46,7 +46,7 @@ const ProductItemComponent = ({ result }) => {
   };
 
   return (
-    <div className="m-4 h-[400px] w-64 overflow-hidden rounded-lg border p-3">
+    <div className="m-4  hover:shadow-lg w-64 overflow-hidden rounded-lg  p-3">
       <div className="relative w-full ">
         {result.id == 1 ? (
           <ProductDiscount discount={5} />
@@ -70,15 +70,15 @@ const ProductItemComponent = ({ result }) => {
           <EyeIcon />
         </Link>
       </div>
-      <div className="group relative">
+      <div className="group relative"> 
         <img
           src={result.image}
           alt={result.title}
-          className="sm:w-50 m-auto my-4 w-40 max-w-full object-cover"
+          className="sm:w-50 m-auto  h-60 my-4   max-w-full  "
         />
         <button
           onClick={handleAddToCart}
-          className="absolute bottom-0 hidden w-full bg-gray-900 px-4 py-3 text-white group-hover:block "
+          className="absolute bottom-0 hidden w-full rounded bg-gray-900 px-4 py-3 text-white group-hover:block "
         >
           Add to cart
         </button>
