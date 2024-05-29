@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/Auth";
 
 const UserForm = () => {
-  const { user, updateUserProfile } = useContext(AuthContext);
+  //   const { user, updateUserProfile } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [userProfile, setUserProfile] = useState({
     displayName: user.displayName,
     email: user.email,
