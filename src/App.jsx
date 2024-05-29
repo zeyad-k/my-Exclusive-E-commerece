@@ -17,6 +17,7 @@ import { store } from "./store";
 import Loading from "./pages/loading";
 import AllProductsPage from "./pages/AllProductsPage";
 import ProductPage from "./pages/ProductPage";
+import CheckoutPage from "./pages/CheckoutPage";
 export default function App() {
   const persistor = persistStore(store);
   return (
@@ -36,6 +37,7 @@ export default function App() {
                 <Route path="wishlist" element={<WishlistPage />} />
                 <Route path="allProducts" element={<AllProductsPage />} />
                 <Route path="cart" element={<CartPage />} />
+                <Route path="checkout" element={<CheckoutPage />} />
                 <Route path="*" element={<ErrorPage />} />
               </Route>
             </Routes>
