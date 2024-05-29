@@ -4,6 +4,7 @@ import {
   updateQuantity,
 } from "../../store/cartSlice";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const BuyNowButton = ({ product }) => {
   const navigate = useNavigate();
@@ -11,15 +12,18 @@ const BuyNowButton = ({ product }) => {
 
   const CartItems = useSelector((state) => state.cart.items);
   const cartItem = CartItems.find((item) => item.id === product.id);
-  const quantity = cartItem ? cartItem.quantity : 0;
+  const productQuantity = cartItem ? cartItem.quantity : 0;
+  const [quantity, setQuantity] = useState(productQuantity);
 
   const handleDecrement = () => {
     if (quantity > 1) {
+      setQuantity(quantity - 1);
       dispatch(updateQuantity({ id: product.id, quantity: quantity - 1 }));
     }
   };
 
   const handleIncrement = () => {
+    setQuantity(quantity + 1);
     dispatch(updateQuantity({ id: product.id, quantity: quantity + 1 }));
   };
 
@@ -43,10 +47,10 @@ const BuyNowButton = ({ product }) => {
           -
         </button>
         <input
-          className=" w-8  px-1 border-l border-r border-black outline-none     "
+          className=" w-8  border-l border-r border-black px-1 outline-none     "
           type="text"
           min={1}
-          value={quantity ? quantity : 1}
+          value={quantity}
         />
 
         <button

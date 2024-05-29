@@ -40,7 +40,7 @@ const ProductPageComponent = (props) => {
   }
 
   return (
-    <div className="grid  grid-cols-2 gap-20">
+    <div className="grid grid-cols-1  gap-20  lg:grid-cols-2">
       {/* <div className="section-images grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"> */}
       {/* <div className="section-images grid justify-items-center gap-4  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"> */}
       <ProductPageComponentImageSection
