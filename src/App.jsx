@@ -18,6 +18,7 @@ import Loading from "./pages/loading";
 import AllProductsPage from "./pages/AllProductsPage";
 import ProductPage from "./pages/ProductPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import ProfilePage from "./pages/ProfilePage";
 export default function App() {
   const persistor = persistStore(store);
   return (
@@ -33,6 +34,7 @@ export default function App() {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="forgotPassword" element={<ForgetPasswordPage />} />
                 <Route path="about" element={<AboutPage />} />
+                <Route path="profile" element={<ProfilePage />} />
                 <Route path="contact" element={<ContactPage />} />
                 <Route path="wishlist" element={<WishlistPage />} />
                 <Route path="allProducts" element={<AllProductsPage />} />
