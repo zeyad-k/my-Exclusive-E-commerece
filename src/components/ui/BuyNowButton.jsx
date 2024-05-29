@@ -43,7 +43,7 @@ const BuyNowButton = ({ product }) => {
           -
         </button>
         <input
-          className=" w-8  border-l border-r border-black outline-none     "
+          className=" w-8  px-1 border-l border-r border-black outline-none     "
           type="text"
           min={1}
           value={quantity ? quantity : 1}
